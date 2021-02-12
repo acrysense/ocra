@@ -55,7 +55,9 @@
             </header>
             <div class="offer">
                 <div class="offer__animation">
-                    <video src="video/ocra-first-screen.mp4" autoplay></video>
+                    <video id="offer-animation" preload="auto" autoplay="true" loop="true" muted="muted">
+                        <source src="video/ocra-first-screen.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="offer__content">
                     <h2 class="offer__title">Extract Data From any standardized documents and Automate Your Business. <strong>Use it for FREE</strong></h2>
@@ -123,26 +125,107 @@
                         <button class="tabs__button">Combine models</button>
                     </li>
                 </ul>
+                <select id="tabs-select" class="tabs__select">
+                    <option value="1">Simple processing</option>
+                    <option value="2">Classification</option>
+                    <option value="3">Combine models</option>
+                </select>
                 <div class="tabs__content tabs__content--active">
                     <div class="schema">
-                        <div class="schema__wrapper">
-                            <div class="schema__item"></div>
+                        <div class="schema__inner">
+                            <div class="schema__wrapper">
+                                <div class="schema__item schema__item--horizontal schema__item--md schema__item--purple-bg">
+                                    <img src="img/dist/sprite.svg#schema-upload" alt="">
+                                    Upload <br>examples
+                                </div>
+                                <div class="schema__item schema__item--md schema__item--purple">
+                                    Label it. <br>Don’t have time? <br>We can help
+                                </div>
+                                <div class="schema__item schema__item--md">
+                                    Train model <br>in 2 clicks!
+                                </div>
+                                <div class="schema__item schema__item--vertical schema__item--md schema__item--pink-bg">
+                                    <img src="img/dist/sprite.svg#schema-api" alt="">
+                                    Use it with API
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="tabs__description">Recognize your documents easily</p>
                 </div>
                 <div class="tabs__content">
                     <div class="schema">
-                        <div class="schema__wrapper">
-                            <div class="schema__item"></div>
+                        <div class="schema__inner">
+                            <div class="schema__wrapper schema__wrapper--center">
+                                <div class="schema__column">
+                                    <div class="schema__item schema__item--horizontal schema__item--md schema__item--purple-bg">
+                                        <img src="img/dist/sprite.svg#schema-upload" alt="">
+                                        Upload #1 <br>document <br>example
+                                    </div>
+                                    <div class="schema__item schema__item--horizontal schema__item--md schema__item--purple-bg">
+                                        <img src="img/dist/sprite.svg#schema-upload" alt="">
+                                        Upload #2 <br>document <br>example
+                                    </div>
+                                </div>
+                                <div class="schema__column schema__column--double">
+                                    <div class="schema__item schema__item--md schema__item--purple">
+                                        Train simple <br>document model
+                                    </div>
+                                    <div class="schema__item schema__item--md schema__item--purple">
+                                        Train simple <br>document model
+                                    </div>
+                                </div>
+                                <div class="schema__item schema__item--md">
+                                    Define document <br>region and create <br>classification
+                                </div>
+                                <div class="schema__item schema__item--vertical schema__item--left schema__item--md schema__item--pink-bg">
+                                    <img src="img/dist/sprite.svg#schema-json" alt="">
+                                    Use all models <br>as single endpoint
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <p class="tabs__description">Create classification models — work with many documents in single flow</p>
                 </div>
                 <div class="tabs__content">
                     <div class="schema">
-                        <div class="schema__wrapper">
-                            <div class="schema__item"></div>
+                        <div class="schema__inner">
+                            <div class="schema__wrapper">
+                                <div class="schema__item schema__item--vertical schema__item--s schema__item--purple-bg">
+                                    <img src="img/dist/sprite.svg#schema-img" alt="">
+                                    Image <br>or PDF
+                                </div>
+                                <div class="schema__item schema__item--vertical schema__item--purple schema__item--left schema__item--md schema__item--accent-arrow">
+                                    <img src="img/dist/sprite.svg#schema-classification" alt="">
+                                    Classification model
+                                </div>
+                                <div class="schema__column schema__column--triple">
+                                    <div class="schema__item schema__item--vertical schema__item--md">
+                                        <img src="img/dist/sprite.svg#schema-models" alt="">
+                                        Merged models
+                                    </div>
+                                    <div class="schema__item schema__item--vertical schema__item--md">
+                                        <img src="img/dist/sprite.svg#schema-models" alt="">
+                                        Merged models
+                                    </div>
+                                    <div class="schema__item schema__item--vertical schema__item--md">
+                                        <img src="img/dist/sprite.svg#schema-models" alt="">
+                                        Merged models
+                                    </div>
+                                </div>
+                                <div class="schema__column schema__column--sixth">
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                    <div class="schema__item schema__item--sm">Single model</div>
+                                </div>
+                                <div class="schema__item schema__item--vertical schema__item--lg schema__item--pink-bg">
+                                    <img src="img/dist/sprite.svg#schema-json" alt="">
+                                    Make OCR and return JSON result
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
