@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ocra.ai</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+    <!-- Main screen -->
+    <section class="main" id="main">
+        <div class="container">
+            <header class="header" id="header">
+                <a href="" class="logotype" id="logotype-header">
+                    <svg width="129" height="18" viewBox="0 0 129 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.5">
+                        <path d="M104.58 11.092C105.052 11.18 105.44 11.416 105.744 11.8C106.048 12.184 106.2 12.624 106.2 13.12C106.2 13.568 106.088 13.964 105.864 14.308C105.648 14.644 105.332 14.908 104.916 15.1C104.5 15.292 104.008 15.388 103.44 15.388H99.8281V7.012H103.284C103.852 7.012 104.34 7.104 104.748 7.288C105.164 7.472 105.476 7.728 105.684 8.056C105.9 8.384 106.008 8.756 106.008 9.172C106.008 9.66 105.876 10.068 105.612 10.396C105.356 10.724 105.012 10.956 104.58 11.092ZM101.508 10.468H103.044C103.444 10.468 103.752 10.38 103.968 10.204C104.184 10.02 104.292 9.76 104.292 9.424C104.292 9.088 104.184 8.828 103.968 8.644C103.752 8.46 103.444 8.368 103.044 8.368H101.508V10.468ZM103.2 14.02C103.608 14.02 103.924 13.924 104.148 13.732C104.38 13.54 104.496 13.268 104.496 12.916C104.496 12.556 104.376 12.276 104.136 12.076C103.896 11.868 103.572 11.764 103.164 11.764H101.508V14.02H103.2Z" fill="#141923"/>
+                        <path d="M109.219 8.368V10.468H112.039V11.8H109.219V14.02H112.399V15.388H107.539V7H112.399V8.368H109.219Z" fill="#141923"/>
+                        <path d="M119.626 7.012V8.368H117.394V15.388H115.714V8.368H113.482V7.012H119.626Z" fill="#141923"/>
+                        <path d="M125.988 13.792H122.652L122.1 15.388H120.336L123.348 7H125.304L128.316 15.388H126.54L125.988 13.792ZM125.532 12.448L124.32 8.944L123.108 12.448H125.532Z" fill="#141923"/>
+                        </g>
+                        <path d="M7.128 4.44C9.352 4.44 11.096 5.008 12.36 6.144C13.64 7.264 14.28 8.904 14.28 11.064C14.28 13.224 13.64 14.872 12.36 16.008C11.096 17.128 9.352 17.688 7.128 17.688C4.904 17.688 3.16 17.128 1.896 16.008C0.632 14.888 0 13.24 0 11.064C0 8.888 0.632 7.24 1.896 6.12C3.16 5 4.904 4.44 7.128 4.44ZM7.128 7.68C5.56 7.68 4.776 8.584 4.776 10.392V11.76C4.776 13.552 5.56 14.448 7.128 14.448C8.712 14.448 9.504 13.552 9.504 11.76V10.392C9.504 8.584 8.712 7.68 7.128 7.68Z" fill="#3935D8"/>
+                        <path d="M23.1358 4.44C25.2158 4.44 26.8958 4.888 28.1758 5.784C29.4718 6.664 30.1198 8.016 30.1198 9.84H25.4878C25.4878 8.4 24.7038 7.68 23.1358 7.68C21.5678 7.68 20.7838 8.584 20.7838 10.392V11.76C20.7838 13.552 21.5998 14.448 23.2318 14.448C24.8638 14.448 25.6798 13.712 25.6798 12.24H30.1198C30.1198 14.08 29.4718 15.448 28.1758 16.344C26.8958 17.24 25.2158 17.688 23.1358 17.688C20.9118 17.688 19.1678 17.128 17.9038 16.008C16.6398 14.888 16.0078 13.24 16.0078 11.064C16.0078 8.888 16.6398 7.24 17.9038 6.12C19.1678 5 20.9118 4.44 23.1358 4.44Z" fill="#3935D8"/>
+                        <path d="M40.2956 4.416C40.6636 4.416 40.9916 4.464 41.2796 4.56C41.5676 4.64 41.7116 4.688 41.7116 4.704V8.712H40.1756C39.1836 8.712 38.4636 8.968 38.0156 9.48C37.5836 9.992 37.3676 10.752 37.3676 11.76V17.4H32.5916V4.728H36.5036L36.8156 6.648C37.1036 5.912 37.5596 5.36 38.1836 4.992C38.8076 4.608 39.5116 4.416 40.2956 4.416Z" fill="#3935D8"/>
+                        <path d="M49.9181 4.44C51.8541 4.44 53.4301 4.768 54.6461 5.424C55.8621 6.064 56.4701 7.112 56.4701 8.568V13.512C56.4701 13.784 56.5341 14.008 56.6621 14.184C56.7901 14.36 56.9821 14.448 57.2381 14.448H58.1021V17.208C58.0541 17.24 57.9261 17.296 57.7181 17.376C57.5261 17.44 57.2461 17.504 56.8781 17.568C56.5101 17.648 56.0861 17.688 55.6061 17.688C54.6781 17.688 53.9101 17.552 53.3021 17.28C52.7101 16.992 52.3021 16.6 52.0781 16.104C51.4701 16.584 50.7901 16.968 50.0381 17.256C49.2861 17.544 48.4061 17.688 47.3981 17.688C44.4221 17.688 42.9341 16.504 42.9341 14.136C42.9341 12.904 43.2621 11.968 43.9181 11.328C44.5901 10.672 45.5501 10.224 46.7981 9.984C48.0461 9.744 49.6781 9.624 51.6941 9.624V9C51.6941 8.504 51.5181 8.128 51.1661 7.872C50.8301 7.616 50.3901 7.488 49.8461 7.488C49.3501 7.488 48.9181 7.576 48.5501 7.752C48.1981 7.928 48.0221 8.208 48.0221 8.592V8.688H43.3181C43.3021 8.608 43.2941 8.496 43.2941 8.352C43.2941 7.152 43.8621 6.2 44.9981 5.496C46.1501 4.792 47.7901 4.44 49.9181 4.44ZM51.6941 11.88C50.3341 11.88 49.3261 12.032 48.6701 12.336C48.0301 12.624 47.7101 13.016 47.7101 13.512C47.7101 14.312 48.2541 14.712 49.3421 14.712C49.9661 14.712 50.5101 14.544 50.9741 14.208C51.4541 13.872 51.6941 13.456 51.6941 12.96V11.88Z" fill="#3935D8"/>
+                        <path d="M73.9181 4.44C75.8541 4.44 77.4301 4.768 78.6461 5.424C79.8621 6.064 80.4701 7.112 80.4701 8.568V13.512C80.4701 13.784 80.5341 14.008 80.6621 14.184C80.7901 14.36 80.9821 14.448 81.2381 14.448H82.1021V17.208C82.0541 17.24 81.9261 17.296 81.7181 17.376C81.5261 17.44 81.2461 17.504 80.8781 17.568C80.5101 17.648 80.0861 17.688 79.6061 17.688C78.6781 17.688 77.9101 17.552 77.3021 17.28C76.7101 16.992 76.3021 16.6 76.0781 16.104C75.4701 16.584 74.7901 16.968 74.0381 17.256C73.2861 17.544 72.4061 17.688 71.3981 17.688C68.4221 17.688 66.9341 16.504 66.9341 14.136C66.9341 12.904 67.2621 11.968 67.9181 11.328C68.5901 10.672 69.5501 10.224 70.7981 9.984C72.0461 9.744 73.6781 9.624 75.6941 9.624V9C75.6941 8.504 75.5181 8.128 75.1661 7.872C74.8301 7.616 74.3901 7.488 73.8461 7.488C73.3501 7.488 72.9181 7.576 72.5501 7.752C72.1981 7.928 72.0221 8.208 72.0221 8.592V8.688H67.3181C67.3021 8.608 67.2941 8.496 67.2941 8.352C67.2941 7.152 67.8621 6.2 68.9981 5.496C70.1501 4.792 71.7901 4.44 73.9181 4.44ZM75.6941 11.88C74.3341 11.88 73.3261 12.032 72.6701 12.336C72.0301 12.624 71.7101 13.016 71.7101 13.512C71.7101 14.312 72.2541 14.712 73.3421 14.712C73.9661 14.712 74.5101 14.544 74.9741 14.208C75.4541 13.872 75.6941 13.456 75.6941 12.96V11.88Z" fill="#3935D8"/>
+                        <path d="M83.8299 3.24V0H88.6059V3.24H83.8299ZM83.8299 17.4V4.728H88.6059V17.4H83.8299Z" fill="#3935D8"/>
+                        <path d="M65.136 14.9C65.136 16.2807 64.0167 17.4 62.636 17.4C61.2553 17.4 60.136 16.2807 60.136 14.9C60.136 13.5193 61.2553 12.4 62.636 12.4C64.0167 12.4 65.136 13.5193 65.136 14.9Z" fill="#3935D8"/>
+                    </svg>
+                </a>
+                <div class="overlay">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Documentation</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="" class="nav__link">Downloads</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="auth">
+                        <a href="" class="auth__btn">Sign in</a>
+                        <a href="" class="auth__btn auth__btn--accent btn btn--purple">Sign up</a>
+                    </div>
+                </div>
+                <button class="hamburger" id="hamburger-toggle">
+                    Меню
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                    <span class="hamburger__inner"></span>
+                </button>
+            </header>
+            <div class="offer">
+                <div class="offer__animation">
+                    <video src="video/ocra-first-screen.mp4" autoplay></video>
+                </div>
+                <div class="offer__content">
+                    <h2 class="offer__title">Extract Data From any standardized documents and Automate Your Business. <strong>Use it for FREE</strong></h2>
+                    <p class="offer__description">Free API for Receipts and Invoices parsing</p>
+                    <div class="offer__animation offer__animation--mobile">
+                        <video src="video/ocra-first-screen.mp4" autoplay></video>
+                    </div>
+                    <div class="offer__buttons">
+                        <a href="" class="offer__btn btn btn--pink btn--arrow">Start it</a>
+                        <a href="" class="offer__link btn btn--border">How it works?</a>
+                    </div>
+                    <div class="github">
+                        <div class="github__content">
+                            <p class="github__description">Free open-source labelling software. <a href="" class="github__link">Get it on github.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of main screen -->
+    <!-- Advantages -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="advantages__wrapper">
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="img/dist/advantages-01.svg" alt="Support jpg/png images and pdf documents">
+                    </div>
+                    <p class="advantages__description">Support <strong>jpg/png images and pdf</strong> documents</p>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="img/dist/advantages-02.svg" alt="Add people to document processing">
+                    </div>
+                    <p class="advantages__description"><strong>Add people to document processing.</strong> You can share only blocks of image to your team or external team.</p>
+                </div>
+                <div class="advantages__item">
+                    <div class="advantages__img">
+                        <img src="img/dist/advantages-03.svg" alt="Parse any document">
+                    </div>
+                    <p class="advantages__description"><strong>Parse any document</strong>
+                        — you need from
+                        10 example and
+                        20 minutes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of advantages -->
+    <!-- How it works -->
+    <section class="howitworks" id="howitworks">
+        <div class="container">
+            <h2 class="section-heading">How it works?</h2>
+            <div class="tabs">
+                <ul class="tabs__list" role="tablist">
+                    <li class="tabs__item tabs__item--active">
+                        <button class="tabs__button">Simple processing</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button">Classification</button>
+                    </li>
+                    <li class="tabs__item">
+                        <button class="tabs__button">Combine models</button>
+                    </li>
+                </ul>
+                <div class="tabs__content tabs__content--active">
+                    <div class="schema">
+                        <div class="schema__wrapper">
+                            <div class="schema__item"></div>
+                        </div>
+                    </div>
+                    <p class="tabs__description">Recognize your documents easily</p>
+                </div>
+                <div class="tabs__content">
+                    <div class="schema">
+                        <div class="schema__wrapper">
+                            <div class="schema__item"></div>
+                        </div>
+                    </div>
+                    <p class="tabs__description">Create classification models — work with many documents in single flow</p>
+                </div>
+                <div class="tabs__content">
+                    <div class="schema">
+                        <div class="schema__wrapper">
+                            <div class="schema__item"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of how it works -->
+    <!-- Technology -->
+    <section class="technology" id="technology">
+        <div class="container">
+            <h2 class="section-heading">Technology</h2>
+            <div class="technology__wrapper">
+                <div class="technology__image">
+                    <img src="img/dist/technology-img.png" alt="Technology">
+                </div>
+                <div class="technology__list">
+                    <div class="technology__item">
+                        <div class="technology__img">
+                            <img src="img/dist/technology-01.svg" alt="Simplest APIs">
+                        </div>
+                        <div class="technology__content">
+                            <h3 class="technology__title">Simplest APIs</h3>
+                            <p class="technology__description">All the Lorem Ipsum generators on the <br>Internet tend to repeat predefined chunks.</p>
+                        </div>
+                    </div>
+                    <div class="technology__item">
+                        <div class="technology__img">
+                            <img src="img/dist/technology-02.svg" alt="Instruments for manual verification">
+                        </div>
+                        <div class="technology__content">
+                            <h3 class="technology__title">Instruments for manual verification</h3>
+                            <p class="technology__description">Many desktop publishing packages and web page editors now use.</p>
+                        </div>
+                    </div>
+                    <div class="technology__item">
+                        <div class="technology__img">
+                            <img src="img/dist/technology-03.svg" alt="Work with datasets for other models">
+                        </div>
+                        <div class="technology__content">
+                            <h3 class="technology__title">Work with datasets for other models</h3>
+                            <p class="technology__description">The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet.."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of technology -->
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-heading">Price? It’s completely free!</h2>
+            <div class="pricing__wrapper">
+                <div class="pricing__item pricing__item--pink">
+                    <div class="pricing__img">
+                        <picture>
+                            <source srcset="img/dist/pricing-illustration-01.svg" media="(min-width: 576px)">
+                            <img src="img/dist/pricing-illustration-01m.svg" alt="I don’t want to pay">
+                        </picture>
+                    </div>
+                    <div class="pricing__content">
+                        <div class="pricing__details">
+                            <div class="pricing__group">
+                                <h3 class="pricing__title">I don’t want to pay</h3>
+                                <p class="pricing__help">Only use it. No problem.</p>
+                            </div>
+                            <a href="" class="pricing__btn btn btn--white btn--arrow">Start it</a>
+                        </div>
+                        <p class="pricing__description">Big amount of data. If you want to recognize more than
+                            5000 papers per month please contact me and I’ll create private server for you. <strong>You will pay for hardware
+                                and devops work only.</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="pricing__item pricing__item--bottom-img">
+                    <div class="pricing__content">
+                        <h3 class="pricing__title">But I wan’t to give you money</h3>
+                        <ul class="pricing__list">
+                            <li class="pricing__elem">Speedup training. I use GPU for models training. It takes
+                                a time - and can be slow. I can get google cloud instance</li>
+                            <li class="pricing__elem">I have a plans to create standalone version of project. Money can’t help me be harry. Create models for your business</li>
+                            <li class="pricing__elem">Donations</li>
+                        </ul>
+                        <a href="" class="pricing__link btn btn--border">Contact me</a>
+                    </div>
+                    <div class="pricing__img pricing__img--bottom">
+                        <img src="img/dist/pricing-illustration-02.svg" alt="But I wan’t to give you money">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of pricing -->
+    <!-- Usecases -->
+    <section class="usecases" id="usecases">
+        <div class="container">
+            <h2 class="section-heading">Usecases</h2>
+            <div class="usecases__wrapper">
+                <div class="usecases__item">
+                    <div class="usecases__img">
+                        <img src="img/dist/usecases-01.svg" alt="Recognizing and understanding data archives">
+                    </div>
+                    <div class="usecases__content">
+                        <h3 class="usecases__title">Recognizing and understanding data archives</h3>
+                        <p class="usecases__description">The archive is dusty with data that I would like to digitize and extract the most important. You can get all the data in the form of json arrays, add them to your database and get rid of this old stuff.</p>
+                    </div>
+                </div>
+                <div class="usecases__item">
+                    <div class="usecases__img">
+                        <img src="img/dist/usecases-02.svg" alt="Recognition of handwritten documents">
+                    </div>
+                    <div class="usecases__content">
+                        <h3 class="usecases__title">Recognition of handwritten documents</h3>
+                        <p class="usecases__description">Impossible? Some paid OCR systems can do this - easily plug them into the system! And use the service of collective verification of the result!</p>
+                    </div>
+                </div>
+                <div class="usecases__item">
+                    <div class="usecases__img">
+                        <img src="img/dist/usecases-03.svg" alt="HR Forms & Applications">
+                    </div>
+                    <div class="usecases__content">
+                        <h3 class="usecases__title">HR Forms & Applications</h3>
+                        <p class="usecases__description">Pull data from standardized documents, reports, forms. Including pdf</p>
+                    </div>
+                </div>
+                <div class="usecases__item">
+                    <div class="usecases__img">
+                        <img src="img/dist/usecases-04.svg" alt="Invoice processing">
+                    </div>
+                    <div class="usecases__content">
+                        <h3 class="usecases__title">Invoice processing</h3>
+                        <p class="usecases__description">You have regular payers and you don’t want to hammer in their details. The system is able to automatically determine from whom the data and send it to you</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of usecases -->
+    <!-- Plans -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2 class="section-heading">Plans</h2>
+            <div class="plans__wrapper">
+                <div class="plans__item">
+                    <h3 class="plans__title">Quickbook and XAPO integrations for incvoices and receipts</h3>
+                    <div class="plans__images">
+                        <img src="img/dist/plans-01.svg" alt="qb">
+                        <img src="img/dist/plans-02.svg" alt="xero">
+                    </div>
+                </div>
+                <div class="plans__item">
+                    <h3 class="plans__title">Mobile application <br>for photo</h3>
+                    <div class="plans__images">
+                        <img src="img/dist/plans-03.svg" alt="mobile application">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of plans -->
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <a href="" class="logotype">
+                    <img src="img/dist/logotype-black.svg" alt="ocra.ai">
+                </a>
+                <span class="footer__copyright footer__copyright--made">Made with</span>
+                <span class="footer__copyright">© 2020-2021</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+    <!-- Scripts -->
+    <script src="js/app.min.js"></script>
+</body>
+</html>
